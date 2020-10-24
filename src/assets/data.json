@@ -1,0 +1,23 @@
+[
+{
+    "nom":"Hindou",
+    "prenom":"Abderehman",
+    "login":"Hind jiddou",
+    "password":"0000",
+    "roles":["USER","ADMIN"]
+  },
+  {
+    "nom":"Esma",
+    "prenom":"Med elhady",
+    "login":"Esma elhady",
+    "password":"0000",
+    "roles":["USER","ADMIN"]
+  },
+   {
+    "nom":"Bouchra",
+    "prenom":"Nana Khabaz",
+    "login":"bouchra kh",
+    "password":"0000",
+     "roles":["USER","ADMIN"]
+  }
+]

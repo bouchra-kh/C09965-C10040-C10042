@@ -1,0 +1,36 @@
+ <br>
+ <button class="btn btn-primary text-right"  routerLink="../add">Ajouter employer</button>
+ <br> <br> <br> 
+  <form #f="ngForm" (ngSubmit)="onChercher(f.value)">
+              <div class="form-group">
+               <input type="text" name="keyword" ngModel >
+               <button type="submit" class="btn btn-primary right glyphicon glyphicon-search"> Search</button>
+              </div>
+  </form>
+  <br> 
+<h5>Menu Employes Detail</h5>
+<table class="table">
+
+  <thead>
+    <tr>
+      <th scope="col"> nom </th>
+      <th scope="col"> prenom</th>
+      <th scope="col">dateNaissance</th>
+      <th scope="col"> nbHeureAbsent</th>
+      <th scope="col"> note</th>
+       <th scope="col" colspan="2" class="text-center">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let empl of employees._embedded.employees ">
+      <td>{{empl.nom}}</td>
+      <td>{{empl.prenom}}</td>
+      <td>{{empl.dateNe}}</td>
+      <td>{{empl.nbHeureAb}}</td>
+      <td>{{empl.note}}</td>
+      <td> <a class="btn btn-info  " [routerLink]="['../update',empl.id]"   >modifier</a></td>
+       <td> <a class="btn btn-danger" (click)="onDeleteEmploye(empl._links.self.href)">Supprimer</a></td>
+    </tr>
+     
+  </tbody>
+</table>

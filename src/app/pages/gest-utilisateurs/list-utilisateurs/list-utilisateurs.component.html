@@ -1,0 +1,19 @@
+<h5>Liste utilisateurs </h5>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"> nom </th>
+      <th scope="col"> prenom</th>
+      <th scope="col">login</th>
+    
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let u of  utilisateurs">
+      <td>{{u.nom}}</td>
+      <td>{{u.prenom}}</td>
+      <td>{{u.login}}</td>
+    </tr>
+  </tbody>
+</table>
+
